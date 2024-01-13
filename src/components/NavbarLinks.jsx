@@ -6,12 +6,8 @@
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-
-// Site Link Objects
-const siteLinks = [
-    {ID: 'Home', URL: '/', Name: 'Home'},
-    {ID: 'About', URL: '/about', Name: 'About'},
-];
+//Import Navigation Links
+import { siteLinks } from '../App';
 
 //Component
 const NavbarLinks = ({className, onClick}) => {
@@ -31,11 +27,7 @@ const NavbarLinks = ({className, onClick}) => {
                     
                 )
             })}
-
-
         </div>
-
-  
     )
 }
 
