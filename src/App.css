@@ -42,9 +42,9 @@
   color: #888;
 }
 
-div {
+/* div {
   border: 1px solid #000;
-}
+} */
 .app-header {
   display: flex;
   flex-direction: column;

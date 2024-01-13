@@ -4,7 +4,7 @@ import { FaBars } from 'react-icons/fa';
 
 //Import Components
 import SocialIcons from './SocialIcons';
-import CloseMenuButton from './CloseMenuButton';
+import MenuButton from './MenuButton';
 import NavbarLinks from './NavbarLinks';
 
 //Import Styles
@@ -19,11 +19,8 @@ const MobileMenu = () => {
     };
 
     return (
-        <div className='menu-button'>
-            <button onClick={toggleMenu}>
-                <FaBars />
-            </button>
-
+        <div className='button-container'>
+            <MenuButton className='menu-button-primary' buttonText={<FaBars />} onClick={toggleMenu} />
             
                 <div className={`mobile-menu-container ${isOpen ? 'open' : ''}`}>
                 {isOpen && (
@@ -32,7 +29,7 @@ const MobileMenu = () => {
 
                         <div className="mobile-menu-header">
                             <SocialIcons className=''/>
-                            <CloseMenuButton onClick={toggleMenu} />
+                            <MenuButton className='menu-button-white' buttonText='Close' onClick={toggleMenu} />
                         </div>
 
                         <NavbarLinks  className='mobile-menu-links'  onClick={toggleMenu} />
