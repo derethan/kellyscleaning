@@ -1,0 +1,23 @@
+.site-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.banner-logo {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* 1024 Breakpoint */
+@media (min-width: 1024px) {
+    .site-banner {
+        flex-direction: row;
+    }
+
+    .banner-logo {
+        max-width: 500px;
+    }
+}
+    

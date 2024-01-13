@@ -1,0 +1,116 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav::before {
+    content: '';
+}
+
+.navbar-title, .navbar-title a, .navbar-title a:hover {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+    cursor: pointer;
+}
+.navbar-title {
+    padding-left: 45px;
+}
+
+.mobile-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100vh;
+    
+    background-color: var(--color-primary);
+    
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+    }
+.mobile-menu-container.open {
+    transform: translateY(0%);
+}   
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    padding: 1rem;
+    padding-top: 50px;
+}
+
+/* Mobile menu Links Container */
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+    padding: 1rem 0;
+    
+    width: 100%;
+
+    cursor: pointer;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+.mobile-menu-links a {
+    text-decoration: none;
+    color: #fff;
+}
+.mobile-menu-links a:hover {
+    color: #9aa0a0;
+}
+.mobile-menu-links a.active-link {
+    font-size: 2rem;
+    color: #fff;
+  }
+  .mobile-menu-links a.active-link:hover {
+    font-size: 2rem;
+    color: #9aa0a0;
+  }
+
+
+/* Desktop Menu Links Container, Hides for Mobile */
+.menu-links {
+    display: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .navbar-title {
+        display: none;
+    }
+    .menu-button {
+        display: none;
+    }
+
+    /* Desktop Menu Links Container*/
+    .menu-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        margin: auto;
+        padding: 1rem 0;
+    }
+
+}

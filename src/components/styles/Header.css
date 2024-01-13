@@ -1,0 +1,39 @@
+.title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-title {
+    display: none;
+}
+
+.social-container {
+    display: none;
+}
+.contact-number {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 700;
+}
+.phone-icon {
+    color: var(--color-primary);
+}
+
+
+/* Breakpoint for Desktop Screens */
+@media screen and (min-width: 1024px) {
+    .title-container {
+        justify-content: space-between;
+    }
+
+    .site-title,
+    .social-container {
+        display: flex;
+    }
+}
+
