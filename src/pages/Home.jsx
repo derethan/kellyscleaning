@@ -1,13 +1,13 @@
 // Import Components
-import Container from '../components/Container';
+import Container from '@mui/material/Container';
+
 import SiteBanner from '../components/SiteBanner';
 
 const Home = () => {
     return (
-        <div className='home'>
-            <Container Content={SiteBanner} />
-            
-        </div>
+        <Container maxWidth="lg">
+            <SiteBanner />
+      </Container>
     )
 }
 

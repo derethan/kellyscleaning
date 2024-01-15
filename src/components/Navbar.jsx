@@ -12,8 +12,6 @@ const Navbar = () => {
       <SiteTitle className="navbar-title"/>
       <NavbarLinks  className='menu-links'/>
       <MobileMenu />
-
-
     </nav>
   )
 }

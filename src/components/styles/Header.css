@@ -5,6 +5,12 @@
     justify-content: center;
 }
 
+
+.site-title, .site-title a, .site-title a:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+    cursor: pointer;
+}
 .site-title {
     display: none;
 }

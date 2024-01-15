@@ -5,7 +5,7 @@ const SocialIcons = ({ className }) => {
         <div className={className}>
 
         <div className='facebook'>
-            <a href='hhttps://www.facebook.com/profile.php?id=61553757477866'>
+            <a href='https://www.facebook.com/profile.php?id=61553757477866'>
                 <img src='../facebook.png' alt='facebook' style={{width:50}}/>
             </a>
         </div>

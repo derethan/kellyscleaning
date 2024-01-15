@@ -22,15 +22,8 @@ import './App.css';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 
-// Import Pages
-import Home from './pages/Home';
-import About from './pages/About';
 
-  // Site Link Objects
-  export const siteLinks = [
-    {ID: 'Home', URL: '/', Name: 'Home'},
-    {ID: 'About', URL: '/about', Name: 'About'},
-  ];
+import { siteLinks } from './Routes';
 
 function App() {
 
@@ -41,8 +34,11 @@ function App() {
     <main>
 
      <Routes>
-         <Route path="/" element={<Home />} />
-         <Route path="/About" element={<About />} />
+      {siteLinks.map((link) => {
+			return (
+				<Route key={link.ID} path={link.URL} element={link.Component} />
+			)
+      })}
      </Routes>
    
    </main>
