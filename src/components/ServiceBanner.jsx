@@ -31,6 +31,23 @@ const ServiceBanner = () => {
                     desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae quam vel nunc ultricies ultricies. Donec euismod, nisi at rutrum ultricies, nisl leo ultrices ante, a fermentum nunc nisl vel nunc. Sed vitae quam vel nunc ultricies ultricies. Donec euismod, nisi at rutrum ultricies, nisl leo ultrices ante, a fermentum nunc nisl vel nunc."
                 />
             </Grid>
+            
+            <Grid item xs={12} md={4}>
+                <ServiceCard
+                    title="Deep Cleaning"
+                    subtext="For Businesses & Residences"
+                    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae quam vel nunc ultricies ultricies. Donec euismod, nisi at rutrum ultricies, nisl leo ultrices ante, a fermentum nunc nisl vel nunc. Sed vitae quam vel nunc ultricies ultricies. Donec euismod, nisi at rutrum ultricies, nisl leo ultrices ante, a fermentum nunc nisl vel nunc."
+                />
+            </Grid>
+
+            <Grid item xs={12} md>
+                <ServiceCard
+                    title="Move In/Out Cleaning"
+                    subtext="For Landlords &"
+                    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae quam vel nunc ultricies ultricies. Donec euismod, nisi at rutrum ultricies, nisl leo ultrices ante, a fermentum nunc nisl vel nunc. Sed vitae quam vel nunc ultricies ultricies. Donec euismod, nisi at rutrum ultricies, nisl leo ultrices ante, a fermentum nunc nisl vel nunc."
+                />
+            </Grid>
+            
         </Grid>
 
 

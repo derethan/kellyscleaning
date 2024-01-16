@@ -16,6 +16,14 @@ nav::before {
     padding-left: 45px;
 }
 
+
+/* Desktop Menu Links Container, Hides for Mobile */
+.menu-links {
+    display: none;
+}
+
+
+/* Mobile Menu Container */
 .mobile-menu-container {
     position: fixed;
     top: 0;
@@ -35,6 +43,7 @@ nav::before {
     transform: translateY(0%);
 }   
 
+/* Mobile Menu dropdown*/
 .mobile-menu {
     display: flex;
     flex-direction: column;
@@ -92,33 +101,8 @@ nav::before {
   }
 
 
-/* Desktop Menu Links Container, Hides for Mobile */
-.menu-links {
-    display: none;
-}
 
-
-/* Button Styles */
-.menu-button-primary {
-    background-color:  var(--color-primary);
-    border: none;
-}
-.menu-button-primary:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-}
-.menu-button-white {
-    background-color:  #fff;
-    color: var(--color-primary);
-    font-weight: 600;
-
-    border: none;
-}
-.menu-button-white:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-}
-
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 900px) {
 
     .navbar-title {
         display: none;

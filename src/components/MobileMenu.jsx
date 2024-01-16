@@ -31,21 +31,12 @@ const MobileMenu = () => {
                     <div className="mobile-menu">
 
                         <div className="mobile-menu-header">
-                            <SocialIcons />
+                            <SocialIcons className='flex gap1' />
                             <Button
                                 variant='contained'
                                 size="small"
                                 onClick={toggleMenu}
                                 color='error'
-                                // sx={{
-                                //     backgroundColor: 'whitesmoke',
-                                //     color: 'var(--color-primary)',
-                                //     opacity: '0.8',
-                                //     '&:hover': {
-                                //         backgroundColor: `rgba(var(--color-primary-rgb), 0.8)`,
-                                //         color: 'white',
-                                //     },
-                                // }} 
                             >Close Menu
                             </Button>                        
                         </div>

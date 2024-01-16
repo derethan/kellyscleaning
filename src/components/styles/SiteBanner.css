@@ -9,13 +9,6 @@
     width: 100%;
     max-width: 300px;
 }
-.mybutton {
-    background-color: var(--color-primary) !important;
-    color: black !important;
-}
-.mybutton:hover {
-    background-color: var(--color-primary-rgb), 5 !important;
-}
 
 .card-blue.MuiCard-root {
     background: linear-gradient(to right, transparent, rgba(var(--color-primary-rgb), 0.3), transparent);
@@ -29,7 +22,7 @@
 }
 
 /* 1024 Breakpoint */
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
     .site-banner {
         flex-direction: row;
         height: 500px;
