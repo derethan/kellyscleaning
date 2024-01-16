@@ -140,9 +140,6 @@ nav::before {
         padding: 1rem 0;
 
         width: 100%;
-
-        font-size: 1.2rem;
-        font-weight: 700;
         }
     .menu-links::after {
         content: '';
@@ -160,12 +157,15 @@ nav::before {
         text-decoration: none;
         color: var(--color-primary);
 
+        
+        font-size: 1.2rem;
+        font-weight: 700;
         cursor: pointer;
     }
     .menu-links a:hover {
         font-size: 1.5rem;
         font-weight: 700;
-        color: #000;
+        color: var(--font-grey);
         text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);   
     }
 
@@ -189,7 +189,7 @@ nav::before {
     .menu-links a.active-link {
         font-size: 1.5rem;
         font-weight: 700;
-        color: #000;
+        color: var(--font-grey);
       }
 
 

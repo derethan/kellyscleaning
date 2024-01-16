@@ -10,7 +10,7 @@ const ServiceCard = ({ title, subtext, desc  }) => {
             color: 'black',
             transition: 'all 0.5s ease',
             '&:hover': {
-                boxShadow: '0 0 1rem rgba(0,0,0,0.7)',
+                boxShadow: '0 0 0.6rem rgba(0,0,0,0.5)',
                 transform: 'scale(1.05)',
             },
         }

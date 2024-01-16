@@ -21,10 +21,10 @@ const SiteBanner = () => {
                     <Typography sx={{ fontSize: 18 }} color="var(--color-primary)" gutterBottom>
                     Welcome
                     </Typography>
-                    <Typography variant="h4" color="black">                    
+                    <Typography variant="h4" color="var(--font-grey)">                    
                     A Clean home is a happy home
                     </Typography>
-                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                    <Typography sx={{ mb: 1.5 }} color="var(--font-lightgrey)">
                     Book your appointment today!
                     </Typography>
                 </CardContent>
