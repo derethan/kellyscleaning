@@ -15,7 +15,7 @@ const SocialIcons = ({ className }) => {
 }
 
 SocialIcons.propTypes = {
-    className: PropTypes.string.isRequired,
+    className: PropTypes.string,
 };
 
 export default SocialIcons;

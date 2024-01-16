@@ -1,8 +1,9 @@
 // Import Images
 import siteLogo from '../assets/logo_main.png';
 
-// Import MUI Components
-import { Container, Card, CardContent, CardActions, Typography, Button } from '@mui/material';
+// Import Components
+import { Container, Card, CardContent, CardActions, Typography } from '@mui/material';
+import MainButton from './MainButton';
 
 // Import Styles
 import './styles/SiteBanner.css';
@@ -28,7 +29,7 @@ const SiteBanner = () => {
                     </Typography>
                 </CardContent>
                 <CardActions style={{ display: 'flex', justifyContent: 'center' }}>
-                    <Button variant='contained' size="small">Book Now</Button>
+                    <MainButton>Book Now</MainButton>
                 </CardActions>
 
             </Card>

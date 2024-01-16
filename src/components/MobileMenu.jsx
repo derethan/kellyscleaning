@@ -4,8 +4,11 @@ import { FaBars } from 'react-icons/fa';
 
 //Import Components
 import SocialIcons from './SocialIcons';
-import MenuButton from './MenuButton';
+import MainButton from './MainButton';
 import NavbarLinks from './NavbarLinks';
+
+import { Button } from '@mui/material';
+
 
 //Import Styles
 const MobileMenu = () => {
@@ -20,7 +23,7 @@ const MobileMenu = () => {
 
     return (
         <div className='button-container'>
-            <MenuButton className='menu-button-primary' buttonText={<FaBars />} onClick={toggleMenu} />
+            <MainButton onClick={toggleMenu}> <FaBars /> </MainButton>
             
                 <div className={`mobile-menu-container ${isOpen ? 'open' : ''}`}>
                 {isOpen && (
@@ -28,8 +31,23 @@ const MobileMenu = () => {
                     <div className="mobile-menu">
 
                         <div className="mobile-menu-header">
-                            <SocialIcons className=''/>
-                            <MenuButton className='menu-button-white' buttonText='Close' onClick={toggleMenu} />
+                            <SocialIcons />
+                            <Button
+                                variant='contained'
+                                size="small"
+                                onClick={toggleMenu}
+                                color='error'
+                                // sx={{
+                                //     backgroundColor: 'whitesmoke',
+                                //     color: 'var(--color-primary)',
+                                //     opacity: '0.8',
+                                //     '&:hover': {
+                                //         backgroundColor: `rgba(var(--color-primary-rgb), 0.8)`,
+                                //         color: 'white',
+                                //     },
+                                // }} 
+                            >Close Menu
+                            </Button>                        
                         </div>
 
                         <NavbarLinks  className='mobile-menu-links'  onClick={toggleMenu} />
