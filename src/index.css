@@ -12,10 +12,25 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Theme variables */
+  /* Theme Colors */
   --color-primary: #00c2ca;
   --color-primary-rgb: 0, 194, 202; 
 
+  --color-primary-contrast: #fff;
+  --color-primary-contrast-rgb: 255, 255, 255;
+  
+  --color-secondary: #0ac1e0;
+  --color-secondary-rgb: 10, 193, 224;
+
+  /* Font Colors */
+  --font-primary: #000;
+  --font-secondary: #fff;
+
+  --font-grey: #5b5b5b;
+  --font-grey-rgb: 91, 91, 91;
+
+  --font-lightgrey: #8b8b8b;
+  --font-lightgrey-rgb: 139, 139, 139;
 
 }
 /* Reset some default styles */
