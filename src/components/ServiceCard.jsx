@@ -1,19 +1,10 @@
 // Import Components
 import { Typography, Card } from '@mui/material';
 
-// Import prop types
-import PropTypes from 'prop-types';
 
 
-// Prop Types
-ServiceCard.propTypes = {
-    title: PropTypes.string.isRequired,
-    subtext: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
-}
 
-
-const ServiceCard = ({ title, subtext, desc  }) => {
+const ServiceCard = ({ title, subtext, desc, icon  }) => {
     
     return (
     <Card sx={
@@ -32,6 +23,7 @@ const ServiceCard = ({ title, subtext, desc  }) => {
         }
     
     }>
+        {icon}
         <Typography variant="h5" component="div" gutterBottom sx={{
             color: 'white',
             paddingTop: '1rem',

@@ -21,6 +21,7 @@ import './App.css';
 // Import Components
 import Header from './components/Header';
 import Navbar from './components/Navbar';
+import SiteFooter from './components/SiteFooter';
 
 
 import { siteLinks } from './Routes';
@@ -42,6 +43,8 @@ function App() {
      </Routes>
    
    </main>
+
+   <SiteFooter />
  </BrowserRouter>
   )
 }
