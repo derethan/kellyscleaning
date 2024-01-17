@@ -4,6 +4,7 @@ import siteLogo from '../assets/logo_main.png';
 // Import Components
 import { Container, Card, CardContent, CardActions, Typography } from '@mui/material';
 import MainButton from './MainButton';
+import { Link } from 'react-router-dom';
 
 // Import Styles
 import './styles/SiteBanner.css';
@@ -29,7 +30,9 @@ const SiteBanner = () => {
                     </Typography>
                 </CardContent>
                 <CardActions style={{ display: 'flex', justifyContent: 'center' }}>
-                    <MainButton>Book Now</MainButton>
+                    <Link to='/booking'>
+                        <MainButton> Book Now </MainButton>
+                    </Link>
                 </CardActions>
 
             </Card>
