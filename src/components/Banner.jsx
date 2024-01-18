@@ -10,8 +10,8 @@ import PropTypes from 'prop-types';
 const Banner = ({ text }) => {
     return (
 
-        <Container maxWidth='md'>
-                <Typography variant="h3">{text}</Typography>
+        <Container maxWidth='sm'>
+                <Typography variant="h4">{text}</Typography>
         </Container>
     );
     }

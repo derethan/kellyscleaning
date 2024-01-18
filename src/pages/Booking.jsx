@@ -8,17 +8,17 @@ const BookingPage = () => {
     return (
 
         <>
-        <Container className='banner' maxWidth="lg">
+        <Container className='banner' maxWidth="100vw">
             <Banner text="View Pricing, Availability, and Book your Cleaning Below" />
         </Container>
 
-        <Container maxWidth="lg" sx={{
+        <Container maxWidth="100vw" sx={{
             backgroundColor: '#f5f5f5'
         }}>
             <BookingForm />
         </Container>
 
-        
+
         </>
     )
 }

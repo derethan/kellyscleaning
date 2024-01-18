@@ -121,8 +121,7 @@ nav::before {
         position: relative;
 
         margin: auto;
-        padding: 1rem 0;
-
+        padding-bottom: 1rem;
         width: 100%;
         }
     .menu-links::after {
