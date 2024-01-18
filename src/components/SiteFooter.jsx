@@ -1,7 +1,7 @@
 // Desc: Site footer component
 
 // import CSS
-import './styles/Footer.css'
+import './styles/GenericStyles.css'
 
 // Import Components
 import { Container, Box , Typography, Link } from '@mui/material'
@@ -10,7 +10,7 @@ const SiteFooter = () => {
 
     return (
         <footer>
-            <Container className='footer' sx={{
+            <Container className='banner-fade' sx={{
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',

@@ -23,7 +23,7 @@ const ServiceBanner = () => {
         </Typography>
 
         <Grid container spacing={4} justifyContent='center'>
-            <Grid item xs={12} md={4}>
+            <Grid item='true' xs={12} md={4}>
                 <ServiceCard
                     title="Residential Cleaning"
                     subtext="For Homes & Condos"
@@ -39,7 +39,7 @@ const ServiceBanner = () => {
                 />
             </Grid>
 
-            <Grid item xs={12} md={4}>
+            <Grid item='true' xs={12} md={4}>
                 <ServiceCard
                     title="Deep Cleaning"
                     subtext="For Businesses & Residences"
@@ -55,7 +55,7 @@ const ServiceBanner = () => {
                 />
             </Grid>
 
-            <Grid item xs={12} md={4}>
+            <Grid item='true' xs={12} md={4}>
                 <ServiceCard
                     title="Commercial Cleaning"
                     subtext="For Businesses"
@@ -71,7 +71,7 @@ const ServiceBanner = () => {
                 />
             </Grid>
 
-            <Grid item xs={12} md>
+            <Grid item='true' xs={12} md>
                 <ServiceCard
                     title="Move In/Out Cleaning"
                     subtext="For Landlords & Tenants"

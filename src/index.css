@@ -24,6 +24,8 @@
 
   /* Font Colors */
   --font-primary: #000;
+  --font-primary-rgb: 0, 0, 0;
+  
   --font-secondary: #fff;
 
   --font-grey: #5b5b5b;
