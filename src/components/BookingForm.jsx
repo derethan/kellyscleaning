@@ -33,6 +33,22 @@ const BookingForm = () => {
 
                 <Divider />
 
+                <Box sx={{marginBottom: '1.5rem'}}>
+                    <Typography variant="h6" gutterBottom sx={{
+                        color: 'var(--color-primary)',
+                        paddingTop: '1rem',
+                        }}>
+                        Contact Information
+                    </Typography>
+                    <Typography sx={{ 
+                        mb: 1.5,
+                        fontSize: '0.8rem',
+                        }} 
+                        color="text.secondary">
+                        Please enter your contact information below.
+                    </Typography>
+                </Box>
+
             </Card>
         </Container>
 
