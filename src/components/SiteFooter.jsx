@@ -27,20 +27,27 @@ const SiteFooter = () => {
                 marginTop: 0,
 
             }}>
-                
                 <Box>
-                    <Typography variant="subtitle1" component="h6" gutterBottom sx={{color: 'var(--font-grey)'}}>
+                    <Typography variant='body2' gutterBottom sx={{
+                        color: 'var(--font-grey)',
+                        fontSize: {xs: '0.5rem', md: '0.8rem', lg: '1rem'},                        
+                        }}>
                         &copy; 2024 Kelly's Crystal Clear Cleaning
                     </Typography>
 
-                    <Typography variant="body2" color="text.secondary"sx={{color: 'var(--font-lightgrey)'}}>
+                    <Typography variant='subtitle1' sx={{
+                        color: 'var(--font-lightgrey)',
+                        fontSize: {xs: '0.5rem', md: '0.8rem', lg: '1rem'},                        
+                        }}>
                         All Rights Reserved.
                     </Typography>
                 </Box>
                 
+
                 <Box>
-                    <Typography variant="button" component="h6" gutterBottom sx={{
-                        fontSize: '0.6rem',
+                    <Typography variant="button" component="p"  sx={{
+                        
+                        fontSize: {xs: '0.5rem'},                        
                         '& a': {
                             color: 'var(--font-lightgrey)',
                             textDecoration: 'none',
@@ -59,7 +66,6 @@ const SiteFooter = () => {
                 <Box sx={{ 
                     display: 'flex',
                     flexDirection: 'row',
-                    gap: '1rem',
 
                     '& a': {
                         color: 'var(--font-grey)',
@@ -72,12 +78,16 @@ const SiteFooter = () => {
                       },
                     }}>
 
-                    <Typography variant="subtitle1" component="h6" gutterBottom>
+                    <Typography variant="subtitle1" component='div'  sx={{
+                        fontSize: {xs: '0.5rem', md: '0.8rem', lg: '1rem'},                        
+                    }}>
                         <Link href="/terms" target="_blank" rel="noopener">
                             Terms and Conditions
                         </Link>
                     </Typography>
-                    <Typography variant="subtitle1" component="h6" gutterBottom>
+                    <Typography variant="subtitle1" component='div' sx={{
+                        fontSize: {xs: '0.5rem', md: '0.8rem', lg: '1rem'},
+                    }}>
                         <Link href="/privacy" target="_blank" rel="noopener">
                             Privacy Policy
                         </Link>

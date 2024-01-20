@@ -1,5 +1,4 @@
 import { styled } from '@mui/material/styles';
-import { Typography } from '@mui/material';
 
 
 const BaseTheme = styled('h4')(({ theme }) => ({

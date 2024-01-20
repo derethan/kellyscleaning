@@ -1,14 +1,5 @@
 
 
-.title-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    padding: 1rem;
-}
-
 .site-title, .site-title a, .site-title a:hover {
     color: var(--color-primary);
     text-decoration: none;
@@ -37,10 +28,7 @@
 
 /* Breakpoint for Desktop Screens */
 @media screen and (min-width: 900px) {
-    .title-container {
-        justify-content: space-between;
-    }
-
+    
     .site-title,
     .social-container {
         display: flex;

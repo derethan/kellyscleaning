@@ -4,7 +4,7 @@ import SocialIcons from "./SocialIcons";
 import SiteTitle from './SiteTitle';
 import ContactNumber from './ContactNumber';
 
-
+import { Box } from '@mui/material';
 
 
 const Header = () => {
@@ -12,13 +12,16 @@ const Header = () => {
 
         <header>
         
-        <div className='title-container'>
-          
-          <SocialIcons className='social-container' />
-          <SiteTitle className='site-title' />
-          <ContactNumber className='contact-number'/>
-        
-        </div>
+          <Box display={'flex'} alignItems={'center'} padding={'1rem'} sx={{
+            justifyContent: {
+              xs: 'center',
+              lg: 'space-between',
+            },
+          }}>
+            <SocialIcons className='social-container' />
+            <SiteTitle className='site-title' varient='h4' />
+            <ContactNumber className='contact-number'/>
+          </Box>
 
         </header>
     )
