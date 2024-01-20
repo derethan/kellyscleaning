@@ -3,11 +3,11 @@ import Typography from '@mui/material/Typography';
 
 import { NavLink } from 'react-router-dom';
 
-const SiteTitle = ({className}) => {
+const SiteTitle = ({className, varient}) => {
   return (
     <div className={className}>
       <NavLink to="/">
-        <Typography variant="h5" gutterBottom>
+        <Typography variant={varient} gutterBottom>
           Kelly's Crystal Clear Cleaning
         </Typography>
       </NavLink>

@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <SiteTitle className="navbar-title"/>
+      <SiteTitle className="navbar-title" varient='h6' />
       <NavbarLinks  className='menu-links'/>
       <MobileMenu />
     </nav>
