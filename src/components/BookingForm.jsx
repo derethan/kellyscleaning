@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import { Container, Box, Typography, Card, Button } from '@mui/material';
+import { Container, Box, Card, Button } from '@mui/material';
 
-import TextField from '@mui/material/TextField';
+import AddressForm from './AddressForm';
 
 import Divider from './Divider';
 import CardHeader1 from './CardHeader1';
@@ -24,7 +24,11 @@ const BookingForm = () => {
         time: '',
         notes: '',
     });
-    
+    // Setup Form Errors State
+    const [formErrors, setErrors] = useState({});
+
+    // List of required fields
+    const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'address', 'city'];
     
     // Handle Form Data Change
     const handleChange = (e) => {
@@ -32,11 +36,6 @@ const BookingForm = () => {
         setFormData((prevState) => ({...prevState, [name]: value}));
     }
 
-    // Setup Form Errors State
-    const [formErrors, setErrors] = useState({});
-
-    // List of required fields
-    const requiredFields = ['firstName', 'lastName', 'email', 'phone'];
 
 
     // Validate Form Data
@@ -51,25 +50,29 @@ const BookingForm = () => {
             }
         });
 
-        // Set the errors state
+        // Set the errors state, errors will display on empty fields
         setErrors(errors);
 
-        // Return true if no errors
-        return Object.keys(errors).length === 0;
+        // Return the errors object (empty if no errors)
+        return errors;
     }
 
     // Handle Form Submission
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        //  Get the errors object from the validateForm function
+        const errors = validateForm();
+
         // If the form is valid, log the form data
-        if (validateForm()) {
+        if (Object.keys(errors).length === 0) {
+            
             console.log(formData);
         }
 
         // Otherwise, log the errors
         else {
-            console.log (formErrors)
+            console.log('Invalid Form Data: ', errors);
         }
         
     }
@@ -99,30 +102,14 @@ const BookingForm = () => {
 
                     <ContactInfoForm formData={formData} handleChange={handleChange} formErrors={formErrors} />
 
+                    <AddressForm formData={formData} handleChange={handleChange} formErrors={formErrors} />
+
 
                     <Button variant="contained" 
                         type='submit'
                         >
                         Book Cleaning
                     </Button>
-
-                    {/* <Box sx={{
-                        marginBottom: '1.5rem',
-                        '& .MuiTextField-root': { m: 1, width: '25ch'},
-                        }}>
-
-                        <CardHeader1 varient='h6'
-                        primaryText='Where would you like us to clean?'
-                        subText='Please provide the address of the location you would like us to clean.'
-                        />    
-
-
-                        <TextField required fullWidth id="outlined-basic" label="Address" variant="outlined" /> <br />
-                        <TextField id="outlined-basic" label="Apt/Suite #" variant="outlined" />
-                        <TextField required id="outlined-basic" label="City" variant="outlined" />
-                    </Box> */}
-
-
 
 {/* 
                     <Box sx={{
