@@ -24,6 +24,7 @@ const SiteFooter = () => {
                 left: 0,
 
                 padding: '1rem',
+                marginTop: 0,
 
             }}>
                 
