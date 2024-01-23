@@ -7,7 +7,9 @@ import AddressForm from './AddressForm';
 import Divider from './Divider';
 import CardHeader1 from './CardHeader1';
 import ContactInfoForm from './ContactInfoForm';
+import DateSelectionForm from './DateSelectionForm';
 
+import dayjs from 'dayjs';
 
 const BookingForm = () => {
 
@@ -20,28 +22,37 @@ const BookingForm = () => {
         address: '',
         apt: '',
         city: '',
-        date: '',
-        time: '',
         notes: '',
     });
+
     // Setup Form Errors State
     const [formErrors, setErrors] = useState({});
 
-    // List of required fields
-    const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'address', 'city'];
-    
+    //Setup Date State
+    const [date, setDate] = useState({
+        date: dayjs(),
+        time: dayjs(),
+    });
+
+
     // Handle Form Data Change
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevState) => ({...prevState, [name]: value}));
     }
 
-
+    // Handle Date Change
+    const handleDateChange = (newValue, name) => {
+            setDate((prevState) => ({...prevState, [name]: newValue}));
+    }
 
     // Validate Form Data
     const validateForm = () => {
         const errors = {};
 
+        // List of required fields
+        const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'address', 'city'];
+    
         // For each field, check if it's empty, and if so add an error
         requiredFields.forEach((key) => {
 
@@ -56,6 +67,8 @@ const BookingForm = () => {
         // Return the errors object (empty if no errors)
         return errors;
     }
+
+
 
     // Handle Form Submission
     const handleSubmit = (e) => {
@@ -77,14 +90,21 @@ const BookingForm = () => {
         
     }
     
+
+    /********************************************
+     *  Booking Form Component Return Statement  *
+     * ******************************************/
+
+
     return (
         <Container maxWidth="sm" sx={{
-            padding: '2rem',
+            paddingTop: '2rem',
+            paddingBottom: '2rem',
         }}>
 
             <Card sx={{
                 padding: '2rem',
-                width: '100%'
+                width: '100%',
             }}>
                 <CardHeader1 varient='h5' 
                 primaryText='Book a Cleaning' 
@@ -94,15 +114,17 @@ const BookingForm = () => {
                 <Divider />
 
                 {/* Form Content Begins Here */}
-
+                
                 <Box component="form" onSubmit={handleSubmit} noValidate sx={{
                     '& .MuiTextField-root': { m: 1, width: '25ch'},
                     }}>
 
-
                     <ContactInfoForm formData={formData} handleChange={handleChange} formErrors={formErrors} />
 
                     <AddressForm formData={formData} handleChange={handleChange} formErrors={formErrors} />
+
+                    <DateSelectionForm date={date} handleChange={handleDateChange} />
+
 
 
                     <Button variant="contained" 
@@ -111,18 +133,7 @@ const BookingForm = () => {
                         Book Cleaning
                     </Button>
 
-{/* 
-                    <Box sx={{
-                        marginBottom: '1.5rem',
-                        }}>
-                        <CardHeader1 varient='h6'
-                        primaryText='When would you like us to clean?'
-                        subText='Please select an available date and time for your cleaning.
-                        If you cannot find a time that works for you, please contact us and we will do our best to accomodate you.'
-                        />
-
-
-                    </Box> */}
+                    
                 </Box>
                 
 
