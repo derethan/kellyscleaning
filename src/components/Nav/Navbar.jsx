@@ -1,8 +1,8 @@
 import MobileMenu from "./MobileMenu";
-import SiteTitle from "./SiteTitle";
+import SiteTitle from "../SiteTitle";
 import NavbarLinks from "./NavbarLinks";
 
-import "./styles/navbar.css";
+import "../styles/navbar.css";
 
 const Navbar = () => {
 

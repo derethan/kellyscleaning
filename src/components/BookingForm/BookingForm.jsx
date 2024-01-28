@@ -4,8 +4,8 @@ import { Container, Box, Card, Button } from '@mui/material';
 
 import AddressForm from './AddressForm';
 
-import Divider from './Divider';
-import CardHeader1 from './CardHeader1';
+import Divider from '../Divider';
+import CardHeader1 from '../CardHeader1';
 import ContactInfoForm from './ContactInfoForm';
 import DateSelectionForm from './DateSelectionForm';
 
@@ -43,11 +43,13 @@ const BookingForm = () => {
 
     // Handle Date Change
     const handleDateChange = (newValue, name) => {
-            setDate((prevState) => ({...prevState, [name]: newValue}));
+        setDate((prevState) => ({...prevState, [name]: newValue}));
     }
 
     // Validate Form Data
     const validateForm = () => {
+
+
         const errors = {};
 
         // List of required fields
@@ -68,8 +70,6 @@ const BookingForm = () => {
         return errors;
     }
 
-
-
     // Handle Form Submission
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -81,21 +81,87 @@ const BookingForm = () => {
         if (Object.keys(errors).length === 0) {
             
             console.log(formData);
+            console.log(date.date.format('MM/DD/YYYY'));
+            console.log(date.time.format('h:mm A'));
+            createBooking();
         }
-
         // Otherwise, log the errors
         else {
             console.log('Invalid Form Data: ', errors);
         }
-        
     }
     
+    const createBooking = () => {
+
+        fetch ('http://localhost:3000/booking/create', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify ({
+                firstName: formData.firstName,
+                lastName: formData.lastName,
+                email: formData.email,
+                phone: formData.phone,
+                address: formData.address,
+                apt: formData.apt,
+                city: formData.city,
+                notes: formData.notes,
+                date: date.date.format('MM/DD/YYYY'),
+                time: date.time.format('h:mm A'),
+            })
+            })
+            .then((response) => response.json())
+
+            .then((data) => {
+                console.log('Success:', data.bookingId);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
+
+        
+        // Fetch Booking Data
+        const getData = async (endpoint) => {
+            const URL = import.meta.env.VITE_API_URL;
+
+            try {
+                // Fetch Data
+                const responce = await fetch(URL + endpoint, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                // Throw Error if responce is not ok
+                if (!responce.ok) {
+                    throw new Error(`HTTP Error: ${responce.status}`);
+                } 
+
+                // Return Data
+                const data = await responce.json();
+                return data;            
+            
+            } catch (error) {
+                console.log(error);
+            }
+
+        };
+
+        // Fetch Booking Data
+        const availableHours = getData('booking/availability').then((data) => {
+            console.log(data.availability);
+        });
+
+        //test
+        console.log(availableHours);
+
 
     /********************************************
      *  Booking Form Component Return Statement  *
      * ******************************************/
-
-
     return (
         <Container maxWidth="sm" sx={{
             paddingTop: '2rem',
@@ -125,18 +191,14 @@ const BookingForm = () => {
 
                     <DateSelectionForm date={date} handleChange={handleDateChange} />
 
-
-
                     <Button variant="contained" 
                         type='submit'
                         >
                         Book Cleaning
                     </Button>
-
                     
                 </Box>
-                
-
+            
             </Card>
         </Container>
 

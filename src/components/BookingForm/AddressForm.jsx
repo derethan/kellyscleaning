@@ -1,6 +1,6 @@
 import { Box, TextField } from '@mui/material'
 
-import CardHeader1 from './CardHeader1'
+import CardHeader1 from '../CardHeader1'
 
 const addressForm = ({formData, handleChange, formErrors}) => {
 

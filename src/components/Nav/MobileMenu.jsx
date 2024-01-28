@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 
 //Import Components
-import SocialIcons from './SocialIcons';
-import MainButton from './MainButton';
+import SocialIcons from '../SocialIcons';
+import MainButton from '../MainButton';
 import NavbarLinks from './NavbarLinks';
 
 import { Button } from '@mui/material';

@@ -1,8 +1,8 @@
-import './styles/Header.css'
+import '../styles/Header.css'
 
-import SocialIcons from "./SocialIcons";
-import SiteTitle from './SiteTitle';
-import ContactNumber from './ContactNumber';
+import SocialIcons from "../SocialIcons";
+import SiteTitle from '../SiteTitle';
+import ContactNumber from '../ContactNumber';
 
 import { Box } from '@mui/material';
 

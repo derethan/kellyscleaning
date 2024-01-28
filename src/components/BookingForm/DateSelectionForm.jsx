@@ -5,10 +5,11 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker, MobileTimePicker, renderDigitalClockTimeView } from '@mui/x-date-pickers';
 
-import CardHeader1 from './CardHeader1';
+import CardHeader1 from '../CardHeader1';
 
 
 import props from 'prop-types';
+
 
 const DateSelectionForm = ({date,handleChange}) => {
     
@@ -45,6 +46,8 @@ const DateSelectionForm = ({date,handleChange}) => {
             <MobileTimePicker 
             label="Time" 
             views={['hours']}
+
+            minutesStep={60}
 
             viewRenderers={{
                 hours: renderDigitalClockTimeView,

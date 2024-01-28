@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 //Import Navigation Links
-import { siteLinks } from '../Routes';
+import { siteLinks } from '../../Routes';
 
 //Component
 const NavbarLinks = ({className, onClick}) => {

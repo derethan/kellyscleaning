@@ -19,8 +19,8 @@ import '@fontsource/roboto/700.css';
 import './App.css';
 
 // Import Components
-import Header from './components/Header';
-import Navbar from './components/Navbar';
+import Header from './components/Header/Header';
+import Navbar from './components/Nav/Navbar';
 import SiteFooter from './components/SiteFooter';
 
 

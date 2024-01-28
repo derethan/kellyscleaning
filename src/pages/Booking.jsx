@@ -1,7 +1,7 @@
 import Container from '@mui/material/Container';
 
 import Banner from '../components/Banner';
-import BookingForm from '../components/BookingForm';
+import BookingForm from '../components/BookingForm/BookingForm';
 
 
 const BookingPage = () => {

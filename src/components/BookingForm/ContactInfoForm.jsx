@@ -2,7 +2,7 @@
 // Import dependencies
 import { Box, TextField } from '@mui/material';
 
-import CardHeader1 from './CardHeader1';
+import CardHeader1 from '../CardHeader1';
 
 
 // Import prop types
