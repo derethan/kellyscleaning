@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 import { Container, Box, Card, Button } from '@mui/material';
 
-import AddressForm from './AddressForm';
-
 import Divider from '../Divider';
 import CardHeader1 from '../CardHeader1';
+
 import ContactInfoForm from './ContactInfoForm';
+import AddressForm from './AddressForm';
 import DateSelectionForm from './DateSelectionForm';
 
 import { useContactInfo } from '../../hooks/useContactInfo';
@@ -31,31 +31,27 @@ const BookingForm = () => {
     const { data:availableTimes, loading, error } = useGetData('booking/availability');
     
     
-   
 
 
     // Handle Form Submission
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log (availableTimes);
 
-        // //  Get the errors object from the validateForm function
-        // const errors = validateForm();
+        //  Get the errors object from the validateForm function
+        const errors = validateForm();
 
-        // // If the form is valid, log the form data
-        // if (Object.keys(errors).length === 0) {
+        // If the form is valid, log the form data
+        if (Object.keys(errors).length === 0) {
             
             console.log(formData);
             console.log(date.date.format('MM/DD/YYYY'));
             console.log(date.time.format('h:mm A'));
-
-        //     // createBooking();
-        // }
-        // // Otherwise, log the errors
-        // else {
-        //     console.log('Invalid Form Data: ', errors);
-        // }
+        }
+        // Otherwise, log the errors
+        else {
+            console.log('Invalid Form Data: ', errors);
+        }
     }
     /********************************************
      *  Booking Form Component Return Statement  *

@@ -39,7 +39,7 @@ const addressForm = ({formData, handleChange, formErrors}) => {
             <br />
             <TextField
                 
-                name='aptSuite'
+                name='apt'
                 value={formData.apt}
                 onChange={handleChange}
 
