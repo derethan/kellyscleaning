@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import { Container, Box, Card, Button } from '@mui/material';
 
 import Divider from '../Divider';
@@ -13,7 +11,7 @@ import { useContactInfo } from '../../hooks/useContactInfo';
 import { useFormValidation } from '../../hooks/useFormValidation';
 import { useDateChange } from '../../hooks/useDateChange';
 import { useCreateBooking } from '../../hooks/useCreateBooking';
-import { useGetData } from '../../hooks/useGetData';
+import { useEffect } from 'react';
 
 
 const BookingForm = () => {
@@ -27,32 +25,33 @@ const BookingForm = () => {
     const [formErrors, validateForm] = useFormValidation(formData);
 
     // Setup API Requests
-    const { createBooking } = useCreateBooking();
-    const { data:availableTimes, loading, error } = useGetData('booking/availability');
+    const { booking, createBooking } = useCreateBooking();
     
+    // const { data:availableTimes } = useGetData('booking/availability');
     
-
-
     // Handle Form Submission
     const handleSubmit = (e) => {
         e.preventDefault();
 
-
         //  Get the errors object from the validateForm function
         const errors = validateForm();
 
-        // If the form is valid, log the form data
+        // If the form is valid, create the booking
         if (Object.keys(errors).length === 0) {
-            
-            console.log(formData);
-            console.log(date.date.format('MM/DD/YYYY'));
-            console.log(date.time.format('h:mm A'));
+            createBooking(formData, date);
         }
         // Otherwise, log the errors
         else {
             console.log('Invalid Form Data: ', errors);
         }
     }
+
+    useEffect(() => {
+        if (booking) {
+            console.log(`New Booking Created: `, booking);
+        }
+    }, [booking]);
+
     /********************************************
      *  Booking Form Component Return Statement  *
      * ******************************************/
@@ -86,8 +85,7 @@ const BookingForm = () => {
                     <DateSelectionForm date={date} handleChange={handleDateChange} />
 
                     <Button variant="contained" 
-                        type='submit'
-                        >
+                        type='submit' >
                         Book Cleaning
                     </Button>
                     

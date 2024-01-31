@@ -22,3 +22,6 @@
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
 }
 
+.css-1kvln7l-MuiButtonBase-root-MuiMenuItem-root-MuiDigitalClock-item.Mui-disabled {
+    display: none;
+}
